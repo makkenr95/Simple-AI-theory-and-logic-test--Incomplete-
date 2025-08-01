@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Retail|x64">
+      <Configuration>Retail</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9426BF5B-A0A8-48EB-9E45-DA9BBB4276F2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Game</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\lib.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)DX2DEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Lib\</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_RELEASE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(SolutionDir)DX2DEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Lib\</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_RETAIL;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(SolutionDir)DX2DEngine\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>false</MinimalRebuild>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Lib\</AdditionalLibraryDirectories>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="AIManager.h" />
+    <ClInclude Include="AIBehaviorTree\BrainTree.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="AIBehaviorTree\Dead.h" />
+    <ClInclude Include="Decision\DecisionTree.h" />
+    <ClInclude Include="AIBehaviorTree\EnemyVisible.h" />
+    <ClInclude Include="AIBehaviorTree\EnemyLineOfSight.h" />
+    <ClInclude Include="LerpStuff.h" />
+    <ClInclude Include="AIBehaviorTree\Shoot.h" />
+    <ClInclude Include="AIBehaviorTree\LowHealth.h" />
+    <ClInclude Include="AIBehaviorTree\Print.h" />
+    <ClInclude Include="Statemachine\HealState.h" />
+    <ClInclude Include="Statemachine\AttackState.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="DummyController.h" />
+    <ClInclude Include="EventController.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui.h" />
+    <ClInclude Include="imgui_impl_dx11.h" />
+    <ClInclude Include="imgui_impl_win32.h" />
+    <ClInclude Include="imgui_internal.h" />
+    <ClInclude Include="imstb_rectpack.h" />
+    <ClInclude Include="imstb_textedit.h" />
+    <ClInclude Include="imstb_truetype.h" />
+    <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="PollingController.h" />
+    <ClInclude Include="PollingStation.h" />
+    <ClInclude Include="PontusController.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="SeekController.h" />
+    <ClInclude Include="SeparationController.h" />
+    <ClInclude Include="Statemachine\AIBase.h" />
+    <ClInclude Include="Statemachine\AIHazmatSuitIdleState.h" />
+    <ClInclude Include="Statemachine\AIHazmatSuitPositionState.h" />
+    <ClInclude Include="Statemachine\AIState.h" />
+    <ClInclude Include="Statemachine\GameObject.h" />
+    <ClInclude Include="Statemachine\AI1.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="AIBehaviorTree\WalkToHeal.h" />
+    <ClInclude Include="AIBehaviorTree\Wander.h" />
+    <ClInclude Include="WanderController.h" />
+    <ClInclude Include="Statemachine\WanderState.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="AIManager.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="AIBehaviorTree\Dead.cpp" />
+    <ClCompile Include="Decision\DecisionTree.cpp" />
+    <ClCompile Include="AIBehaviorTree\EnemyVisible.cpp" />
+    <ClCompile Include="AIBehaviorTree\EnemyLineOfSight.cpp" />
+    <ClCompile Include="LerpStuff.cpp" />
+    <ClCompile Include="AIBehaviorTree\Shoot.cpp" />
+    <ClCompile Include="AIBehaviorTree\LowHealth.cpp" />
+    <ClCompile Include="AIBehaviorTree\Print.cpp" />
+    <ClCompile Include="Statemachine\HealState.cpp" />
+    <ClCompile Include="Statemachine\AttackState.cpp" />
+    <ClCompile Include="Controller.cpp" />
+    <ClCompile Include="DummyController.cpp" />
+    <ClCompile Include="EventController.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui_impl_win32.cpp" />
+    <ClCompile Include="imgui_tables.cpp" />
+    <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="PollingController.cpp" />
+    <ClCompile Include="PollingStation.cpp" />
+    <ClCompile Include="PontusController.cpp" />
+    <ClCompile Include="SeekController.cpp" />
+    <ClCompile Include="SeparationController.cpp" />
+    <ClCompile Include="Statemachine\AIBase.cpp" />
+    <ClCompile Include="Statemachine\AIHazmatSuitIdleState.cpp" />
+    <ClCompile Include="Statemachine\AIHazmatSuitPositionState.cpp" />
+    <ClCompile Include="Statemachine\AIState.cpp" />
+    <ClCompile Include="Statemachine\GameObject.cpp" />
+    <ClCompile Include="Statemachine\AI1.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Retail|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="AIBehaviorTree\WalkToHeal.cpp" />
+    <ClCompile Include="AIBehaviorTree\Wander.cpp" />
+    <ClCompile Include="WanderController.cpp" />
+    <ClCompile Include="Statemachine\WanderState.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game.aps" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

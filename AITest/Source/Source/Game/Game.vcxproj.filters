@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Precompiled">
+      <UniqueIdentifier>{b07bafa4-d21c-4674-8f50-96a0b05e15ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI">
+      <UniqueIdentifier>{16165778-c650-493f-b2e1-4073ad3141e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Imgui">
+      <UniqueIdentifier>{25bfc14d-3568-4d8e-a779-96dff1722e63}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Precompiled</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Precompiled</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="resource.h">
+      <Filter>Precompiled</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="AIManager.h" />
+    <ClInclude Include="DummyController.h" />
+    <ClInclude Include="PlayerController.h" />
+    <ClInclude Include="PollingController.h" />
+    <ClInclude Include="PollingStation.h" />
+    <ClInclude Include="EventController.h" />
+    <ClInclude Include="EventManager.h" />
+    <ClInclude Include="WanderController.h" />
+    <ClInclude Include="SeparationController.h" />
+    <ClInclude Include="SeekController.h" />
+    <ClInclude Include="PontusController.h" />
+    <ClInclude Include="imconfig.h" />
+    <ClInclude Include="imgui.h" />
+    <ClInclude Include="imgui_internal.h" />
+    <ClInclude Include="imstb_rectpack.h" />
+    <ClInclude Include="imstb_textedit.h" />
+    <ClInclude Include="imstb_truetype.h" />
+    <ClInclude Include="imgui_impl_dx11.h" />
+    <ClInclude Include="imgui_impl_win32.h" />
+    <ClInclude Include="Statemachine\AIBase.h" />
+    <ClInclude Include="Statemachine\AIHazmatSuitIdleState.h" />
+    <ClInclude Include="Statemachine\AIHazmatSuitPositionState.h" />
+    <ClInclude Include="Statemachine\AIState.h" />
+    <ClInclude Include="Statemachine\AI1.h" />
+    <ClInclude Include="Statemachine\GameObject.h" />
+    <ClInclude Include="Actor.h" />
+    <ClInclude Include="Statemachine\WanderState.h" />
+    <ClInclude Include="Statemachine\AttackState.h" />
+    <ClInclude Include="Statemachine\HealState.h" />
+    <ClInclude Include="Decision\DecisionTree.h" />
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="CollisionManager.h" />
+    <ClInclude Include="LerpStuff.h" />
+    <ClInclude Include="AIBehaviorTree\BrainTree.h" />
+    <ClInclude Include="AIBehaviorTree\EnemyVisible.h" />
+    <ClInclude Include="AIBehaviorTree\Shoot.h" />
+    <ClInclude Include="AIBehaviorTree\LowHealth.h" />
+    <ClInclude Include="AIBehaviorTree\WalkToHeal.h" />
+    <ClInclude Include="AIBehaviorTree\EnemyLineOfSight.h" />
+    <ClInclude Include="AIBehaviorTree\Wander.h" />
+    <ClInclude Include="AIBehaviorTree\Print.h" />
+    <ClInclude Include="AIBehaviorTree\Dead.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Precompiled</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameWorld.cpp" />
+    <ClCompile Include="Controller.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="AIManager.cpp" />
+    <ClCompile Include="DummyController.cpp" />
+    <ClCompile Include="PlayerController.cpp" />
+    <ClCompile Include="PollingController.cpp" />
+    <ClCompile Include="PollingStation.cpp" />
+    <ClCompile Include="EventController.cpp" />
+    <ClCompile Include="EventManager.cpp" />
+    <ClCompile Include="WanderController.cpp" />
+    <ClCompile Include="SeparationController.cpp" />
+    <ClCompile Include="SeekController.cpp" />
+    <ClCompile Include="PontusController.cpp" />
+    <ClCompile Include="imgui.cpp" />
+    <ClCompile Include="imgui_demo.cpp" />
+    <ClCompile Include="imgui_draw.cpp" />
+    <ClCompile Include="imgui_tables.cpp" />
+    <ClCompile Include="imgui_widgets.cpp" />
+    <ClCompile Include="imgui_impl_dx11.cpp" />
+    <ClCompile Include="imgui_impl_win32.cpp" />
+    <ClCompile Include="Statemachine\AIBase.cpp" />
+    <ClCompile Include="Statemachine\AIHazmatSuitIdleState.cpp" />
+    <ClCompile Include="Statemachine\AIHazmatSuitPositionState.cpp" />
+    <ClCompile Include="Statemachine\AIState.cpp" />
+    <ClCompile Include="Statemachine\AI1.cpp" />
+    <ClCompile Include="Statemachine\GameObject.cpp" />
+    <ClCompile Include="Actor.cpp" />
+    <ClCompile Include="Statemachine\WanderState.cpp" />
+    <ClCompile Include="Statemachine\AttackState.cpp" />
+    <ClCompile Include="Statemachine\HealState.cpp" />
+    <ClCompile Include="Decision\DecisionTree.cpp" />
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="CollisionManager.cpp" />
+    <ClCompile Include="LerpStuff.cpp" />
+    <ClCompile Include="AIBehaviorTree\EnemyVisible.cpp" />
+    <ClCompile Include="AIBehaviorTree\Shoot.cpp" />
+    <ClCompile Include="AIBehaviorTree\LowHealth.cpp" />
+    <ClCompile Include="AIBehaviorTree\WalkToHeal.cpp" />
+    <ClCompile Include="AIBehaviorTree\EnemyLineOfSight.cpp" />
+    <ClCompile Include="AIBehaviorTree\Wander.cpp" />
+    <ClCompile Include="AIBehaviorTree\Print.cpp" />
+    <ClCompile Include="AIBehaviorTree\Dead.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Game.aps" />
+  </ItemGroup>
+</Project>
